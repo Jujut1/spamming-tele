@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER indonet - Telegram Spammer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        body {
+            background: #0f0f0f;
+            color: #00ff88;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            border: 2px solid #ff0055;
+            padding: 30px;
+            border-radius: 10px;
+            background: rgba(20, 20, 20, 0.9);
+        }
+        h1 {
+            color: #ff0055;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ff0055;
+        }
+        .subtitle {
+            text-align: center;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00ff88;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            border: 1px solid #00ff88;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .btn {
+            background: linear-gradient(90deg, #ff0055, #9900ff);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #9900ff, #ff0055);
+        }
+        .logs {
+            margin-top: 30px;
+            background: #000;
+            border: 1px solid #ff0055;
+            padding: 15px;
+            height: 200px;
+            overflow-y: auto;
+            border-radius: 5px;
+        }
+        .log-entry {
+            color: #00ff88;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .warning {
+            color: #ffaa00;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🩸 CYBER INDONET - TELEGRAM SPAMMER</h1>
+        <p class="subtitle">Spam Telegram via GitHub Actions | Unlimited Sending</p>
+        
+        <div class="input-group">
+            <label><i class="fas fa-robot"></i> Bot Token (Get from @BotFather)</label>
+            <input type="text" id="botToken" placeholder="1234567890:ABCdefGHIjklMNOpqrsTUVwxyz">
+        </div>
+        
+        <div class="input-group">
+            <label><i class="fas fa-id-badge"></i> Target Chat ID (User/Group)</label>
+            <input type="text" id="chatId" placeholder="-1001234567890 or 123456789">
+        </div>
+        
+        <div class="input-group">
+            <label><i class="fas fa-comment-alt"></i> Message to Spam</label>
+            <textarea id="message" placeholder="Your spam message here...">🔥 CYBER indonet SPAM ATTACK 🔥</textarea>
+        </div>
+        
+        <div class="input-group">
+            <label><i class="fas fa-bolt"></i> Number of Messages</label>
+            <input type="number" id="count" value="100" min="1" max="10000">
+        </div>
+        
+        <div class="input-group">
+            <label><i class="fas fa-clock"></i> Delay (seconds)</label>
+            <input type="number" id="delay" value="1" min="0" max="10">
+        </div>
+        
+        <button class="btn" onclick="startSpam()">
+            <i class="fas fa-paper-plane"></i> LAUNCH SPAM ATTACK
+        </button>
+        
+        <div class="warning">
+            ⚠️ Use responsibly. CYBER indonet not responsible for bans/blocks.
+        </div>
+        
+        <div class="logs">
+            <div id="logContainer">
+                <div class="log-entry">[SYSTEM] Telegram Spammer Ready.</div>
+                <div class="log-entry">[INFO] Enter credentials and hit LAUNCH.</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        CYBER indonet © | PACK LEADER Control Panel | GitHub Actions Powered
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
